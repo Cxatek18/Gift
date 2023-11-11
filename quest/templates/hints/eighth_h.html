@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block first %}
+  <h1 class="card-title text-center mt-5 mb-5">Подсказка</h1>
+
+  <div class="container">
+    <p style="font-size: 32px;">Ваша подсказка, записываем на листочек, оно нам пригодиться для следующего этапа</p>
+
+    <p class="text-center" style="font-size: 80px; background: rgb(0, 247, 255);">
+      {{ hint }}
+    </p>
+
+    <a href="{% url 'ninth' %}" class="btn" style="background-color:#0fdf99; color: #fff; font-size: 28px;">Следующий вопрос</a>
+  </div>
+{% endblock %}

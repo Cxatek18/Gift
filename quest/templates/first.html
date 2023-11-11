@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block first %}
+  <h1 class="card-title text-center mt-5 mb-5">{{ title }}</h1>
+
+  <div class="container">
+
+    <h2>Вопрос:   {{question}}</h2>
+
+    <form method="post">
+      {% csrf_token  %}
+      {{ form.as_p }}
+      
+      <div class="btn text-center">
+
+        <button type="submit" class="btn btn-primary btn-active" style="background-color:#0fdf99; border-color:#3700ff;">
+          Ответить
+        </button>
+      
+      </div>
+
+    </form>
+  </div>
+{% endblock %}
